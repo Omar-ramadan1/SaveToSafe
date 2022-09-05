@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "836847642402",
+    "project_id": "savetosafe-f62e2",
+    "storage_bucket": "savetosafe-f62e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836847642402:android:707269b75255a0a30f277b",
+        "android_client_info": {
+          "package_name": "com.savetosafe.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836847642402-2tpccvie6q1s32ce733agv4nt793vh0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE_4ru6FRPG5IJDYw9BLZ2rMZHZ_AjIsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836847642402-2tpccvie6q1s32ce733agv4nt793vh0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
