@@ -84,28 +84,30 @@ class _AddAssetsPageState extends State<AddAssetsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ElevatedButton(
-                  child: Text(S.of(context).assetPagePrevButton),
-                  onPressed: () {
-                    if (_currentPage > 0) {
-                      pageViewController.animateToPage(_currentPage - 1,
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.ease);
-                    } else if (_currentPage > 3)
-                      print("Should have navigated here to");
-                  },
-                ),
-                ElevatedButton(
-                  child: Text(S.of(context).assetPageNextButton),
-                  onPressed: () {
-                    if (_currentPage <= 3) {
-                      pageViewController.animateToPage(_currentPage + 1,
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.ease);
-                    } else if (_currentPage > 3)
-                      print("Should have navigated here to");
-                  },
-                ),
+                _currentPage > 1 ?
+                  ElevatedButton(
+                    child: Text(S.of(context).assetPagePrevButton),
+                    onPressed: () {
+                      if (_currentPage > 0) {
+                        pageViewController.animateToPage(_currentPage - 1,
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.ease);
+                      } else if (_currentPage > 3)
+                        print("Should have navigated here to");
+                    },
+                  ) : SizedBox(width:100),
+                if(_currentPage < 4)
+                  ElevatedButton(
+                    child: Text(S.of(context).assetPageNextButton),
+                    onPressed: () {
+                      if (_currentPage <= 3) {
+                        pageViewController.animateToPage(_currentPage + 1,
+                            duration: Duration(milliseconds: 500),
+                            curve: Curves.ease);
+                      } else if (_currentPage > 3)
+                        print("Should have navigated here to");
+                    },
+                  ),
               ],
             ),
           ),
